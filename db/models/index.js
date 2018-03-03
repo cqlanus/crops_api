@@ -1,9 +1,5 @@
-const User = require('./user');
-
-
-/* User Relationships */
-
+const Crop = require('./crops');
 
 module.exports = {
-  User
+  Crop
 };
