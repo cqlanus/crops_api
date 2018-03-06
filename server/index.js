@@ -15,7 +15,8 @@ if (process.env.NODE_ENV !== 'production') require('../secrets');
 
 passport.serializeUser((user, done) => done(null, user.id));
 passport.deserializeUser((id, done) => {
-    return db.models.user.findById(id)
+    return db.models.user
+        .findById(id)
         .then(user => done(null, user))
         .catch(done);
 });
@@ -23,14 +24,16 @@ passport.deserializeUser((id, done) => {
 var allowCrossDomain = (req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
-    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, Content-Length, X-Requested-With');
+    res.header(
+        'Access-Control-Allow-Headers',
+        'Content-Type, Authorization, Content-Length, X-Requested-With'
+    );
 
     // intercept OPTIONS method
     if ('OPTIONS' == req.method) {
-      res.send(200);
-    }
-    else {
-      next();
+        res.send(200);
+    } else {
+        next();
     }
 };
 
@@ -41,28 +44,32 @@ const createApp = () => {
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({ extended: true }));
 
-    app.use(session({
-        secret: process.env.SESSION_SECRET || 'not a safe secret',
-        store: sessionStore,
-        resave: false,
-        saveUninitialized: false
-    }));
+    app.use(
+        session({
+            secret: process.env.SESSION_SECRET || 'not a safe secret',
+            store: sessionStore,
+            resave: false,
+            saveUninitialized: false
+        })
+    );
     app.use(passport.initialize());
     app.use(passport.session());
 
     app.use('/auth', require('./auth'));
     app.use('/api', require('./api'));
 
-    app.use(express.static(path.join(__dirname, '..', 'public')));
+    // app.use(express.static(path.join(__dirname, '..', 'public')));
 
-    app.use('*', (req, res) => {
-        res.sendFile(path.join(__dirname, '..', 'public/index.html'));
-    });
+    // app.use('*', (req, res) => {
+    //     res.sendFile(path.join(__dirname, '..', 'public/index.html'));
+    // });
 
     app.use((err, req, res, next) => {
         console.error(err);
         console.error(err.stack);
-        res.status(err.status || 500).send(err.message || 'Internal server error.');
+        res
+            .status(err.status || 500)
+            .send(err.message || 'Internal server error.');
     });
 };
 
@@ -73,7 +80,8 @@ const startListening = () => {
 const syncDb = () => db.sync({});
 
 if (require.main === module) {
-    sessionStore.sync()
+    sessionStore
+        .sync()
         .then(syncDb)
         .then(createApp)
         .then(startListening);
