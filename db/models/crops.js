@@ -97,7 +97,17 @@ const Crop = db.define('crop', {
     },
     maxFlowerToHarvestTime: {
         type: Sequelize.INTEGER
+    },
+    minDaysToMaturity: {
+        type: Sequelize.INTEGER
+    },
+    maxDaysToMaturity: {
+        type: Sequelize.INTEGER
+    },
+    baseGdd: {
+        type: Sequelize.INTEGER
     }
+
 });
 
 module.exports = Crop;
