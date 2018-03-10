@@ -16,6 +16,7 @@ const crops = [
         minGermTime: 5,
         maxGermTime: 7,
         sowOutdoorsBeforeLastFrost: 4,
+        sowOutdoorsBeforeFirstFrost: 8,
         minSoilPh: 6.0,
         maxSoilPh: 7.0,
         minGrowTemp: 50,
@@ -28,6 +29,8 @@ const crops = [
         phosphorusReq: 'low',
         potassiumReq: 'low',
         sunExposure: 'full',
+        minDaysToMaturity: 20,
+        maxDaysToMaturity: 30,
     },
     {
         commonName: 'Beans (bush)',
@@ -39,6 +42,7 @@ const crops = [
         minGermTime: 7,
         maxGermTime: 10,
         sowOutdoorsBeforeLastFrost: 0,
+        sowOutdoorsBeforeFirstFrost: 11,
         minSoilPh: 6.5,
         maxSoilPh: 7.5,
         minGrowTemp: 60,
@@ -51,7 +55,9 @@ const crops = [
         phosphorusReq: 'med',
         potassiumReq: 'med',
         minFlowerToHarvestTime: 10,
-        maxFlowerToHarvestTime: 14
+        maxFlowerToHarvestTime: 14,
+        minDaysToMaturity: 50,
+        maxDaysToMaturity: 70,
     },
     {
         commonName: 'Beans (fava)',
@@ -63,6 +69,7 @@ const crops = [
         minGermTime: 7,
         maxGermTime: 10,
         sowOutdoorsBeforeLastFrost: 0,
+        sowOutdoorsBeforeFirstFrost: 11,
         minSoilPh: 6.5,
         maxSoilPh: 7.5,
         minGrowTemp: 60,
@@ -75,7 +82,10 @@ const crops = [
         phosphorusReq: 'med',
         potassiumReq: 'med',
         minFlowerToHarvestTime: 10,
-        maxFlowerToHarvestTime: 14
+        maxFlowerToHarvestTime: 14,
+        baseGdd: 50,
+        minDaysToMaturity: 50,
+        maxDaysToMaturity: 70,
     },
     {
         commonName: 'Beans (pole)',
@@ -98,7 +108,10 @@ const crops = [
         phosphorusReq: 'med',
         potassiumReq: 'med',
         minFlowerToHarvestTime: 10,
-        maxFlowerToHarvestTime: 14
+        maxFlowerToHarvestTime: 14,
+        baseGdd: 50,
+        minDaysToMaturity: 45,
+        maxDaysToMaturity: 60,
     },
     {
         commonName: 'Beets',
@@ -111,6 +124,7 @@ const crops = [
         sowIndoorsBeforeLastFrost: 5,
         transplantBeforeLastFrost: 2,
         sowOutdoorsBeforeLastFrost: 4,
+        sowOutdoorsBeforeFirstFrost: 10,
         minSoilPh: 6.0,
         maxSoilPh: 7.5,
         minGrowTemp: 65,
@@ -120,7 +134,11 @@ const crops = [
         sunExposure: 'full',
         nitrogenReq: 'low',
         phosphorusReq: 'med',
-        potassiumReq: 'med'
+        potassiumReq: 'med',
+        gddToMaturity: 1253,
+        baseGdd: 40,
+        minDaysToMaturity: 50,
+        maxDaysToMaturity: 70,
     },
     {
         commonName: 'Broccoli',
@@ -144,7 +162,11 @@ const crops = [
         waterFreq: 'med',
         nitrogenReq: 'med',
         phosphorusReq: 'high',
-        potassiumReq: 'high'
+        potassiumReq: 'high',
+        gddToMaturity: 571,
+        baseGdd: 40,
+        minDaysToMaturity: 50,
+        maxDaysToMaturity: 65,
     },
     {
         commonName: 'Brussels Sprouts',
@@ -168,7 +190,10 @@ const crops = [
         waterFreq: 'med',
         nitrogenReq: 'med',
         phosphorusReq: 'high',
-        potassiumReq: 'high'
+        potassiumReq: 'high',
+        baseGdd: 40,
+        minDaysToMaturity: 80,
+        maxDaysToMaturity: 100,
     },
     {
         commonName: 'Cabbage',
@@ -192,7 +217,10 @@ const crops = [
         waterFreq: 'high',
         nitrogenReq: 'high',
         phosphorusReq: 'high',
-        potassiumReq: 'high'
+        potassiumReq: 'high',
+        baseGdd: 40,
+        minDaysToMaturity: 60,
+        maxDaysToMaturity: 90,
     },
     {
         commonName: 'Carrot',
@@ -203,6 +231,7 @@ const crops = [
         minGermTime: 6,
         maxGermTime: 6,
         sowOutdoorsBeforeLastFrost: 2,
+        sowOutdoorsBeforeFirstFrost: 12,
         minSoilPh: 5.5,
         maxSoilPh: 6.5,
         minGrowTemp: 60,
@@ -213,7 +242,11 @@ const crops = [
         waterFreq: 'med',
         nitrogenReq: 'med',
         phosphorusReq: 'low',
-        potassiumReq: 'low'
+        potassiumReq: 'low',
+        gddToMaturity: 550,
+        baseGdd: 38,
+        minDaysToMaturity: 60,
+        maxDaysToMaturity: 80,
     },
     {
         commonName: 'Cauliflower',
@@ -226,6 +259,7 @@ const crops = [
         sowIndoorsBeforeLastFrost: 6,
         transplantBeforeLastFrost: 2,
         sowOutdoorsBeforeLastFrost: 0,
+        sowOutdoorsBeforeFirstFrost: 12,
         minSoilPh: 6.5,
         maxSoilPh: 7.5,
         minGrowTemp: 60,
@@ -236,7 +270,10 @@ const crops = [
         waterFreq: 'med',
         nitrogenReq: 'high',
         phosphorusReq: 'high',
-        potassiumReq: 'high'
+        potassiumReq: 'high',
+        baseGdd: 40,
+        minDaysToMaturity: 55,
+        maxDaysToMaturity: 80,
     },
     {
         commonName: 'Celery',
@@ -247,6 +284,7 @@ const crops = [
         minGermTime: 7,
         sowIndoorsBeforeLastFrost: 10,
         transplantBeforeLastFrost: -1,
+        sowOutdoorsBeforeFirstFrost: 20,
         minSoilPh: 6.0,
         maxSoilPh: 7.0,
         minGrowTemp: 60,
@@ -257,7 +295,9 @@ const crops = [
         waterFreq: 'high',
         nitrogenReq: 'high',
         phosphorusReq: 'high',
-        potassiumReq: 'high'
+        potassiumReq: 'high',
+        minDaysToMaturity: 80,
+        maxDaysToMaturity: 100,
     },
     {
         commonName: 'Corn',
@@ -267,6 +307,7 @@ const crops = [
         minGermTemp: 80,
         minGermTime: 4,
         sowOutdoorsBeforeLastFrost: -1,
+        sowOutdoorsBeforeFirstFrost: 14,
         minSoilPh: 6.0,
         maxSoilPh: 7.0,
         minGrowTemp: 65,
@@ -278,7 +319,11 @@ const crops = [
         phosphorusReq: 'high',
         potassiumReq: 'high',
         minFlowerToHarvestTime: 18,
-        maxFlowerToHarvestTime: 21
+        maxFlowerToHarvestTime: 21,
+        gddToMaturity: 1667,
+        baseGdd: 50,
+        minDaysToMaturity: 70,
+        maxDaysToMaturity: 105,
     },
     {
         commonName: 'Cucumber',
@@ -292,6 +337,7 @@ const crops = [
         sowIndoorsBeforeLastFrost: 3,
         transplantBeforeLastFrost: -2,
         sowOutdoorsBeforeLastFrost: 0,
+        sowOutdoorsBeforeFirstFrost: 12,
         minSoilPh: 6.0,
         maxSoilPh: 7.0,
         minGrowTemp: 70,
@@ -303,7 +349,11 @@ const crops = [
         phosphorusReq: 'high',
         potassiumReq: 'high',
         minFlowerToHarvestTime: 8,
-        maxFlowerToHarvestTime: 10
+        maxFlowerToHarvestTime: 10,
+        gddToMaturity: 1207,
+        baseGdd: 55,
+        minDaysToMaturity: 55,
+        maxDaysToMaturity: 65,
     },
     {
         commonName: 'Eggplant',
@@ -314,6 +364,7 @@ const crops = [
         minGermTime: 7,
         sowIndoorsBeforeLastFrost: 6,
         transplantBeforeLastFrost: -2,
+        sowOutdoorsBeforeFirstFrost: 18,
         minSoilPh: 5.5,
         maxSoilPh: 7.0,
         minGrowTemp: 80,
@@ -325,7 +376,10 @@ const crops = [
         phosphorusReq: 'high',
         potassiumReq: 'high',
         minFlowerToHarvestTime: 40,
-        maxFlowerToHarvestTime: 50
+        maxFlowerToHarvestTime: 50,
+        baseGdd: 60,
+        minDaysToMaturity: 75,
+        maxDaysToMaturity: 90,
     },
     {
         commonName: 'Garlic',
@@ -344,7 +398,8 @@ const crops = [
         waterFreq: 'low',
         nitrogenReq: 'med',
         phosphorusReq: 'med',
-        potassiumReq: 'med'
+        potassiumReq: 'med',
+        minDaysToMaturity: 90,
     },
     {
         commonName: 'Kale',
@@ -358,6 +413,7 @@ const crops = [
         sowIndoorsBeforeLastFrost: 6,
         transplantBeforeLastFrost: 2,
         sowOutdoorsBeforeLastFrost: 0,
+        sowOutdoorsBeforeFirstFrost: 14,
         minSoilPh: 6.0,
         maxSoilPh: 7.0,
         minGrowTemp: 60,
@@ -367,7 +423,10 @@ const crops = [
         waterFreq: 'high',
         nitrogenReq: 'med',
         phosphorusReq: 'med',
-        potassiumReq: 'med'
+        potassiumReq: 'med',
+        baseGdd: 40,
+        minDaysToMaturity: 50,
+        maxDaysToMaturity: 70,
     },
     {
         commonName: 'Leeks',
@@ -388,7 +447,10 @@ const crops = [
         waterFreq: 'med',
         nitrogenReq: 'med',
         phosphorusReq: 'med',
-        potassiumReq: 'med'
+        potassiumReq: 'med',
+        baseGdd: 40,
+        minDaysToMaturity: 100,
+        maxDaysToMaturity: 120,
     },
     {
         commonName: 'Lettuce (leaf)',
@@ -402,6 +464,7 @@ const crops = [
         sowIndoorsBeforeLastFrost: 6,
         transplantBeforeLastFrost: 2,
         sowOutdoorsBeforeLastFrost: 0,
+        sowOutdoorsBeforeFirstFrost: 11,
         minSoilPh: 6.5,
         maxSoilPh: 7.0,
         minGrowTemp: 55,
@@ -411,7 +474,11 @@ const crops = [
         waterFreq: 'med',
         nitrogenReq: 'high',
         phosphorusReq: 'high',
-        potassiumReq: 'high'
+        potassiumReq: 'high',
+        baseGdd: 40,
+        gddToMaturity: 1367,
+        minDaysToMaturity: 45,
+        maxDaysToMaturity: 60,
     },
     {
         commonName: 'Lettuce (head)',
@@ -425,6 +492,7 @@ const crops = [
         sowIndoorsBeforeLastFrost: 6,
         transplantBeforeLastFrost: 2,
         sowOutdoorsBeforeLastFrost: 0,
+        sowOutdoorsBeforeFirstFrost: 12,
         minSoilPh: 6.5,
         maxSoilPh: 7.0,
         minGrowTemp: 55,
@@ -434,7 +502,11 @@ const crops = [
         waterFreq: 'med',
         nitrogenReq: 'high',
         phosphorusReq: 'high',
-        potassiumReq: 'high'
+        potassiumReq: 'high',
+        baseGdd: 40,
+        gddToMaturity: 1367,
+        minDaysToMaturity: 60,
+        maxDaysToMaturity: 70,
     },
     {
         commonName: 'Melon',
@@ -448,6 +520,7 @@ const crops = [
         sowIndoorsBeforeLastFrost: 3,
         transplantBeforeLastFrost: -2,
         sowOutdoorsBeforeLastFrost: -2,
+        sowOutdoorsBeforeFirstFrost: 16,
         minSoilPh: 6.0,
         maxSoilPh: 7.0,
         minGrowTemp: 70,
@@ -459,7 +532,11 @@ const crops = [
         phosphorusReq: 'high',
         potassiumReq: 'high',
         minFlowerToHarvestTime: 40,
-        maxFlowerToHarvestTime: 50
+        maxFlowerToHarvestTime: 50,
+        baseGdd: 50,
+        gddToMaturity: 775,
+        minDaysToMaturity: 75,
+        maxDaysToMaturity: 100,
     },
     {
         commonName: 'Mustard',
@@ -482,7 +559,11 @@ const crops = [
         waterFreq: 'med',
         nitrogenReq: 'high',
         phosphorusReq: 'med',
-        potassiumReq: 'med'
+        potassiumReq: 'med',
+        gddToMaturity: 660,
+        baseGdd: 40,
+        minDaysToMaturity: 30,
+        maxDaysToMaturity: 40,
     },
     {
         commonName: 'Okra',
@@ -504,7 +585,10 @@ const crops = [
         waterFreq: 'low',
         nitrogenReq: 'med',
         phosphorusReq: 'med',
-        potassiumReq: 'med'
+        potassiumReq: 'med',
+        baseGdd: 60,
+        minDaysToMaturity: 50,
+        maxDaysToMaturity: 65,
     },
     {
         commonName: 'Onion',
@@ -526,7 +610,11 @@ const crops = [
         waterFreq: 'med',
         nitrogenReq: 'med',
         phosphorusReq: 'med',
-        potassiumReq: 'med'
+        potassiumReq: 'med',
+        baseGdd: 35,
+        gddToMaturity: 600,
+        minDaysToMaturity: 100,
+        maxDaysToMaturity: 120,
     },
     {
         commonName: 'Parsnips',
@@ -538,6 +626,7 @@ const crops = [
         minGermTime: 12,
         maxGermTime: 14,
         sowOutdoorsBeforeLastFrost: 3,
+        sowOutdoorsBeforeFirstFrost: 14,
         minSoilPh: 6.0,
         maxSoilPh: 7.0,
         minGrowTemp: 60,
@@ -548,7 +637,10 @@ const crops = [
         waterFreq: 'med',
         nitrogenReq: 'high',
         phosphorusReq: 'low',
-        potassiumReq: 'med'
+        potassiumReq: 'med',
+        baseGdd: 40,
+        minDaysToMaturity: 110,
+        maxDaysToMaturity: 130,
     },
     {
         commonName: 'Peas',
@@ -571,7 +663,11 @@ const crops = [
         phosphorusReq: 'low',
         potassiumReq: 'low',
         minFlowerToHarvestTime: 8,
-        maxFlowerToHarvestTime: 10
+        maxFlowerToHarvestTime: 10,
+        gddToMaturity: 2381,
+        baseGdd: 40,
+        minDaysToMaturity: 55,
+        maxDaysToMaturity: 85,
     },
     {
         commonName: 'Peppers',
@@ -584,6 +680,7 @@ const crops = [
         maxGermTime: 8,
         sowIndoorsBeforeLastFrost: 8,
         transplantBeforeLastFrost: -2,
+        sowOutdoorsBeforeFirstFrost: 16,
         minSoilPh: 5.5,
         maxSoilPh: 7.0,
         minGrowTemp: 70,
@@ -595,7 +692,11 @@ const crops = [
         phosphorusReq: 'high',
         potassiumReq: 'high',
         minFlowerToHarvestTime: 40,
-        maxFlowerToHarvestTime: 50
+        maxFlowerToHarvestTime: 50,
+        gddToMaturity: 2021,
+        baseGdd: 50,
+        minDaysToMaturity: 60,
+        maxDaysToMaturity: 90,
     },
     {
         commonName: 'Potatoes',
@@ -605,6 +706,7 @@ const crops = [
         minGermTemp: 45,
         minGermTime: 0,
         sowOutdoorsBeforeLastFrost: 3,
+        sowOutdoorsBeforeFirstFrost: 13,
         minSoilPh: 5.0,
         maxSoilPh: 6.5,
         minGrowTemp: 60,
@@ -614,7 +716,11 @@ const crops = [
         waterFreq: 'med',
         nitrogenReq: 'high',
         phosphorusReq: 'high',
-        potassiumReq: 'high'
+        potassiumReq: 'high',
+        gddToMaturity: 1951,
+        baseGdd: 40,
+        minDaysToMaturity: 90,
+        maxDaysToMaturity: 120,
     },
     {
         commonName: 'Pumpkins',
@@ -638,7 +744,9 @@ const crops = [
         phosphorusReq: 'med',
         potassiumReq: 'med',
         minFlowerToHarvestTime: 40,
-        maxFlowerToHarvestTime: 60
+        maxFlowerToHarvestTime: 60,
+        minDaysToMaturity: 85,
+        maxDaysToMaturity: 120,
     },
     {
         commonName: 'Radishes',
@@ -661,7 +769,10 @@ const crops = [
         waterFreq: 'high',
         nitrogenReq: 'low',
         phosphorusReq: 'low',
-        potassiumReq: 'low'
+        potassiumReq: 'low',
+        baseGdd: 40,
+        minDaysToMaturity: 25,
+        maxDaysToMaturity: 40,
     },
     {
         commonName: 'Rhubarb',
@@ -702,7 +813,9 @@ const crops = [
         waterFreq: 'med',
         nitrogenReq: 'low',
         phosphorusReq: 'med',
-        potassiumReq: 'med'
+        potassiumReq: 'med',
+        minDaysToMaturity: 60,
+        maxDaysToMaturity: 90,
     },
     {
         commonName: 'Spinach',
@@ -726,7 +839,10 @@ const crops = [
         waterFreq: 'low',
         nitrogenReq: 'med',
         phosphorusReq: 'med',
-        potassiumReq: 'med'
+        potassiumReq: 'med',
+        baseGdd: 40,
+        minDaysToMaturity: 45,
+        maxDaysToMaturity: 60,
     },
     {
         commonName: 'Squash (summer)',
@@ -739,6 +855,7 @@ const crops = [
         maxGermTime: 10,
         sowIndoorsBeforeLastFrost: 4,
         transplantBeforeLastFrost: -1,
+        sowOutdoorsBeforeFirstFrost: 10,
         minSoilPh: 6.0,
         maxSoilPh: 6.5,
         minGrowTemp: 65,
@@ -750,7 +867,10 @@ const crops = [
         phosphorusReq: 'med',
         potassiumReq: 'med',
         minFlowerToHarvestTime: 4,
-        maxFlowerToHarvestTime: 5
+        maxFlowerToHarvestTime: 5,
+        baseGdd: 50,
+        minDaysToMaturity: 50,
+        maxDaysToMaturity: 60,
     },
     {
         commonName: 'Squash (winter)',
@@ -763,6 +883,7 @@ const crops = [
         maxGermTime: 10,
         sowIndoorsBeforeLastFrost: 4,
         transplantBeforeLastFrost: -1,
+        sowOutdoorsBeforeFirstFrost: 16,
         minSoilPh: 5.5,
         maxSoilPh: 6.5,
         minGrowTemp: 65,
@@ -774,7 +895,10 @@ const crops = [
         phosphorusReq: 'med',
         potassiumReq: 'med',
         minFlowerToHarvestTime: 40,
-        maxFlowerToHarvestTime: 60
+        maxFlowerToHarvestTime: 60,
+        baseGdd: 50,
+        minDaysToMaturity: 85,
+        maxDaysToMaturity: 120,
     },
     {
         commonName: 'Strawberries',
@@ -794,7 +918,8 @@ const crops = [
         waterFreq: 'med',
         nitrogenReq: 'med',
         phosphorusReq: 'med',
-        potassiumReq: 'med'
+        potassiumReq: 'med',
+        baseGdd: 39,
     },
     {
         commonName: 'Sweet Potatoes',
@@ -804,6 +929,7 @@ const crops = [
         minGermTemp: 0,
         minGermTime: 0,
         sowOutdoorsBeforeLastFrost: -2,
+        sowOutdoorsBeforeFirstFrost: 25,
         minSoilPh: 5.5,
         maxSoilPh: 6.5,
         minGrowTemp: 65,
@@ -813,7 +939,11 @@ const crops = [
         waterFreq: 'low',
         nitrogenReq: 'low',
         phosphorusReq: 'low',
-        potassiumReq: 'low'
+        potassiumReq: 'low',
+        baseGdd: 60,
+        gddToMaturity: 2600,
+        minDaysToMaturity: 100,
+        maxDaysToMaturity: 125,
     },
     {
         commonName: 'Swiss Chard',
@@ -835,7 +965,9 @@ const crops = [
         waterFreq: 'med',
         nitrogenReq: 'low',
         phosphorusReq: 'med',
-        potassiumReq: 'med'
+        potassiumReq: 'med',
+        minDaysToMaturity: 50,
+        maxDaysToMaturity: 60,
     },
     {
         commonName: 'Tomatillos',
@@ -857,7 +989,9 @@ const crops = [
         waterFreq: 'med',
         nitrogenReq: 'low',
         phosphorusReq: 'low',
-        potassiumReq: 'low'
+        potassiumReq: 'low',
+        minDaysToMaturity: 75,
+        maxDaysToMaturity: 100,
     },
     {
         commonName: 'Tomatoes',
@@ -869,6 +1003,7 @@ const crops = [
         maxGermTime: 8,
         sowIndoorsBeforeLastFrost: 6,
         transplantBeforeLastFrost: -2,
+        sowOutdoorsBeforeFirstFrost: 19,
         minSoilPh: 5.8,
         maxSoilPh: 7.0,
         minGrowTemp: 70,
@@ -879,7 +1014,11 @@ const crops = [
         phosphorusReq: 'high',
         potassiumReq: 'high',
         minFlowerToHarvestTime: 45,
-        maxFlowerToHarvestTime: 50
+        maxFlowerToHarvestTime: 50,
+        baseGdd: 50,
+        gddToMaturity: 1300,
+        minDaysToMaturity: 70,
+        maxDaysToMaturity: 90,
     },
     {
         commonName: 'Turnips',
@@ -900,7 +1039,9 @@ const crops = [
         waterFreq: 'med',
         nitrogenReq: 'low',
         phosphorusReq: 'low',
-        potassiumReq: 'low'
+        potassiumReq: 'low',
+        minDaysToMaturity: 45,
+        maxDaysToMaturity: 70,
     },
     {
         commonName: 'Watermelon',
@@ -913,6 +1054,7 @@ const crops = [
         maxGermTime: 10,
         sowIndoorsBeforeLastFrost: 3,
         transplantBeforeLastFrost: -2,
+        sowOutdoorsBeforeFirstFrost: 16,
         minSoilPh: 6.0,
         maxSoilPh: 7.0,
         minGrowTemp: 70,
@@ -924,7 +1066,10 @@ const crops = [
         phosphorusReq: 'med',
         potassiumReq: 'med',
         minFlowerToHarvestTime: 45,
-        maxFlowerToHarvestTime: 60
+        maxFlowerToHarvestTime: 60,
+        baseGdd: 55,
+        minDaysToMaturity: 80,
+        maxDaysToMaturity: 100,
     }
 ];
 
